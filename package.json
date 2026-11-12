@@ -1,0 +1,42 @@
+{
+  "name": "@azulores/koishi-plugin-wordle-letters",
+  "description": "首字母猜词 (Wordle-Leiters): given 首字母 prefixes like ex/a/sp, guess words starting with them. Reduced guesses, same-prefix replay, and inflected forms as answers.",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "src/tiku.txt",
+    "src/djciku.txt",
+    "src/easywords.txt"
+  ],
+  "license": "MIT",
+  "author": "yiyikneesocks",
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin",
+    "wordle",
+    "letters",
+    "game"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').copyFileSync('src/tiku.txt','lib/tiku.txt');require('fs').copyFileSync('src/djciku.txt','lib/djciku.txt');require('fs').copyFileSync('src/easywords.txt','lib/easywords.txt')\""
+  },
+  "peerDependencies": {
+    "koishi": "^4.18.11"
+  },
+  "peerDependenciesMeta": {
+    "koishi-plugin-puppeteer": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yiyikneesocks/koishi-plugin-wordle-letters.git"
+  },
+  "homepage": "https://github.com/yiyikneesocks/koishi-plugin-wordle-letters#readme",
+  "bugs": {
+    "url": "https://github.com/yiyikneesocks/koishi-plugin-wordle-letters/issues"
+  }
+}
